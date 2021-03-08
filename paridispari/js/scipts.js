@@ -12,9 +12,9 @@ do {
 do {
   var numeroUtente = parseInt(prompt("Inserisci un numero tra 1 e 5 compresi"));
 } while (isNaN(numeroUtente) || numeroUtente > 5 || numeroUtente < 1);
-
 // console.log(selezione);
 // console.log(numeroUtente);
+
 // 2. funzione che genera un numero casuale tra 1 e 5 compresi
 function casuale() {
   var numeroCasuale = Math.floor(Math.random() * 5) + 1;
@@ -23,5 +23,20 @@ function casuale() {
 
 // 3. sommo i due numeri
 var somma = numeroUtente + casuale();
-
 console.log(somma);
+
+// 4. funzione che determina se la somma è pari o dispari
+function pariDispari(numero) {
+  if ( numero % 2 == 0) {
+    return "pari";
+  } else {
+    return "dispari";
+  }
+}
+
+// 5 verifico se l'utente ha vinto
+if ( pariDispari(somma) == selezione ) {
+  alert("Hai vinto!");
+} else {
+ alert("Mi dispiace, hai perso");
+}
