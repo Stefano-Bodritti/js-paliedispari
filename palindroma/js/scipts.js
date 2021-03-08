@@ -1,3 +1,6 @@
+// Chiedere all’utente di inserire una parola
+// Creare una funzione per capire se la parola inserita è palindroma
+
 // 1. chiedo parola all'utente
 var parola = prompt("Inserisci una parola");
 
@@ -12,3 +15,9 @@ function palindroma(parola) {
 }
 
 console.log(palindroma(parola));
+// 4. verifico se la parola inversa è uguale alla parola
+if (parola == palindroma(parola)) {
+  alert("La parola è palindroma");
+} else {
+  alert("La parola non è palindroma");
+}
