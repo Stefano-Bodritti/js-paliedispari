@@ -11,12 +11,16 @@ function palindroma(parola) {
   for (var i = parola.length; i >= 0; i--) {
     parolaInversa += parola.charAt(i);
   }
-  return parolaInversa;
+  // 4. verifico se la parola inversa è uguale alla parola
+  if (parola == parolaInversa) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
-console.log(palindroma(parola));
-// 4. verifico se la parola inversa è uguale alla parola
-if (parola == palindroma(parola)) {
+// 5. stampo il risultato
+if ( palindroma(parola) ) {
   alert("La parola è palindroma");
 } else {
   alert("La parola non è palindroma");
