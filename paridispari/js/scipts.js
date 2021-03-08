@@ -13,5 +13,15 @@ do {
   var numeroUtente = parseInt(prompt("Inserisci un numero tra 1 e 5 compresi"));
 } while (isNaN(numeroUtente) || numeroUtente > 5 || numeroUtente < 1);
 
-console.log(selezione);
-console.log(numeroUtente);
+// console.log(selezione);
+// console.log(numeroUtente);
+// 2. funzione che genera un numero casuale tra 1 e 5 compresi
+function casuale() {
+  var numeroCasuale = Math.floor(Math.random() * 5) + 1;
+  return numeroCasuale;
+}
+
+// 3. sommo i due numeri
+var somma = numeroUtente + casuale();
+
+console.log(somma);
